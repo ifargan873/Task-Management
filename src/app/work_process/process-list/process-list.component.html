@@ -1,0 +1,11 @@
+<mat-grid-list cols=4 #grid rowHeight="315px" gutterSize="15px">
+  <mat-grid-tile *ngFor="let contract of contracts">
+    <mat-card class="settings-card">
+      <mat-card-title>
+        {{contract.Name}}
+      </mat-card-title>
+      <mat-card-content>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

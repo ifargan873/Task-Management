@@ -1,0 +1,43 @@
+<clr-main-container>
+	<div class="content-container">
+		<div class="content-area">
+      <div class="main-page">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="sideNav-container">
+        <clr-vertical-nav  class="vertical-nav">
+          <div class="user-wrap">
+            <img 
+            src="{{path}}"
+            id="avatar"
+            alt="avatar"
+            [style.width]="'60px'"
+            [style.width]="'60px'">
+          </div>
+          <div class="user_property">
+            <h3 class="user-name">{{profile?.givenName}} {{profile?.surname}}</h3>
+            <p _ngconten-cdtj-c21="" class="user-desc">{{profile?.jobTitle}}</p>
+          </div>
+          <mat-divider></mat-divider>
+          
+          <div>
+            <a clrVerticalNavLink *ngFor="let item of items" [routerLink]="item.link">
+              {{item.label}}
+            </a>
+    
+            <clr-vertical-nav-group *ngFor="let item of accordingItem"
+            [clrVerticalNavGroupExpanded]="expanded[0]"
+            (clrVerticalNavGroupExpandedChange)="toggle($event, 0)">
+            {{item.label}}
+            <clr-vertical-nav-group-children>
+              <a clrVerticalNavLink *ngFor="let children of item.children" [routerLink]="children.link">
+                {{children.label}}
+              </a>
+            </clr-vertical-nav-group-children>
+          </clr-vertical-nav-group>
+          </div>
+        </clr-vertical-nav>
+      </div>
+		</div>
+	</div>
+</clr-main-container>

@@ -1,0 +1,26 @@
+mat-grid-tile-content{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.settings-card {
+  height: 270px;
+  width: 360px;
+}
+
+mat-card-title {
+  text-align: center;
+}
+
+mat-grid-list{
+  width: 100%;
+}
+
+mat-card {
+  background-color: #f7f7f7;
+}
+
+mat-card:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
