@@ -60,7 +60,7 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
       auth: {
         clientId: '0d7947db-834b-445e-a743-c575555e78ed',
         authority: 'https://login.microsoftonline.com/f265925d-1370-4196-8486-4ca4cfd812c1/',
-        redirectUri: 'http://localhost:4200',
+        redirectUri: 'https://reshit-h-yazamut.herokuapp.com/',
       },
       cache: {
         cacheLocation: 'localStorage',
